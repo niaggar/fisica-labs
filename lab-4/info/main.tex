@@ -9,6 +9,8 @@
 \usepackage{multirow}
 \usepackage{float}
 \usepackage[spanish]{babel}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
 
 \title{
     PÉNDULOS ACOPLADOS\\
@@ -36,29 +38,29 @@
     \maketitle
 
     \begin{abstract}
-        En esta practica de laboratorio se analiza el comporrtamiendo de un sistema de dos pendulos acoplados mediante el resorete, esto con el fin de determinar experimentalmente las frecuencias de los modos normales del sistema junto con los valores para constantes como la gravedad y la constnte de elsaticidad del resorte. Tras el analicis realizado se logro determinar que $g = 11.68 \pm 1.82$ y $k = 2.811 \pm 0.78$.
+        En esta práctica de laboratorio se analiza el comportamiento de un sistema de dos péndulos acoplados mediante el resorte, esto con el fin de determinar experimentalmente las frecuencias de los modos normales del sistema junto con los valores para constantes como la gravedad y la constante de elasticidad del resorte. Tras el análisis realizado se logró determinar que $g = 11.68 \pm 1.82$ y $k = 2.811 \pm 0.78$.
 
-            {\bf Keywords: } Pendulo acoplado, resorte, oscilaciones, frecuencia.
+            {\bf Keywords: } Péndulo acoplado, resorte, oscilaciones, frecuencia.
     \end{abstract}
 
     \section{Análisis de datos}
-        Partiendo de los datos recolectados mediante el instrumento de CASSY Labs se desarrollo un trabajo estadistico en el lenguaje python y con ayuda de diferentes librerias como numpy y scipy para realizar las regresiones. El conjunto total de datos se puede ver en INSERTAR, a continuacion solo se presentaran los resultados mas relevantes.
+        Partiendo de los datos recolectados mediante el instrumento de \texttt{CASSY Labs} se desarrolló un trabajo estadístico en el lenguaje \texttt{python} y con ayuda de diferentes librerías como \texttt{numpy} y \texttt{scipy} para realizar las regresiones. El conjunto total de datos se puede ver en \href{https://drive.google.com/drive/folders/1HW9HpYB_uKflT2-5fgyOxWJDfALd5ZZW?usp=share_link}{\texttt{drive}}, a continuación solo se presentarán los resultados más relevantes.
 
-        El total de mediciones llevadas a cabo fue de 12, 6 para oscilaciones llevadas a cabo en el modo normal de fase y las restasten realizadas en contrafase, de donde, la grafica que presenta el movimiento oscilatorio del sistema, para todos los casos esta dado por lo que se puede observar en la grafica INSERTAR.
+        El total de mediciones llevadas a cabo fue de 12, 6 para oscilaciones llevadas a cabo en el modo normal de fase y las restantes realizadas en contrafase, de donde, la gráfica que presenta el movimiento oscilatorio del sistema, para todos los casos está dado por lo que se puede observar en las siguientes gráficas.
 
         \begin{figure}[H]
             \centering
             \includegraphics[scale = 0.3]{img/diagrama_fase.png}
-            \caption{Evolucion del desplazamiento del pendulo en fase.}
+            \caption{Evolución del desplazamiento del péndulo en fase.}
         \end{figure}
 
         \begin{figure}[H]
             \centering
             \includegraphics[scale = 0.3]{img/digrama_desfase.png}
-            \caption{Evolucion del desplazamiento del pendulo en desfase.}
+            \caption{Evolución del desplazamiento del péndulo en desfase.}
         \end{figure}
  
-        Para cada uno de los casos anteriores se determino el valor de la frecuencia natural del sistema, realizado mediante la busqueda de los maximos con ayuda de python para determinar el perido y a continuacion determianr las frecuencias de la forma $ w = 2 \pi / T $. Estos resultados se pueden observar en la tabla INSERTAR donde se encuentra ademas la relacion ($ \epsilon $) entre la longitud del pendulo y la altura a la que se encontraba el resorte durante dicha medicion.
+        Para cada uno de los casos anteriores se determinó el valor de la frecuencia natural del sistema, realizado mediante la búsqueda de los máximos con ayuda de \texttt{python} para determinar el periodo y a continuación determinar las frecuencias de la forma $ w = 2 \pi / T $. Estos resultados se pueden observar en la tabla \ref{datatable} donde se encuentra además la relación ($ \epsilon $) entre la longitud del péndulo y la altura a la que se encontraba el resorte durante dicha medición.
  
         \begin{table}[H]
             \centering
@@ -74,15 +76,16 @@
             29.5                                        & \multicolumn{1}{l|}{5.38}         & 0.42                              & \multicolumn{1}{l|}{7.72}         & 0.84                              & \multicolumn{1}{l|}{0.75}         & 0.001                             \\ \hline
             \end{tabular}
             \caption{Valores experimentales obtenidos para $w_1$, $w_2$ y $\epsilon$.}
+            \label{datatable}
         \end{table}
 
-        Ahora, conociendo el valor experimental de la frecuencia correspondiente al modo normal de contrafase $ w_2 $ junto con $ \epsilon $ se realzia la grafica de $ w_2^2 vs \epsilon^2 $ la cual mediante la propia definicion teorica de $ w_2 $
+        Ahora, conociendo el valor experimental de la frecuencia correspondiente al modo normal de contrafase $ w_2 $ junto con $ \epsilon $ se realiza la gráfica de $ w_2^2 vs \epsilon^2 $ la cual mediante la propia definición teórica de $ w_2 $
 
         \begin{equation}
             w_2^2 = \frac{g}{L} + 2 \epsilon^2 \frac{k}{M}
         \end{equation}
 
-        se pueden determinar los valores para la gravedad y la constante de elasticidad del resorte al relacionar la pendiente y el intercepto de la regresion lineal que mejor se ajuste a los datos.
+        se pueden determinar los valores para la gravedad y la constante de elasticidad del resorte al relacionar la pendiente y el intercepto de la regresión lineal que mejor se ajuste a los datos.
 
         \begin{figure}[H]
             \centering
@@ -97,7 +100,7 @@
             \item $k = 2.811 \pm 0.78$
         \end{itemize}
 
-        Los valores de error al comparar los resultados experimentales con los teoricos ($g = 9.8099$ y $k=2.9754$) se encuentran dados por INSERTAR.
+        Los valores de error al comparar los resultados experimentales con los teóricos ($g = 9.8099$ y $k=2.9754$) se encuentran dados por:
 
         \begin{itemize}
             \item \% de error para $g$ es de $19.06\%$
@@ -105,7 +108,7 @@
         \end{itemize}
 
     \section{Conclusiones}
-        De los valores obtenidos para la gravedad y la constante de elasticicdad del resorte, se puede observar que los valores aunqeu no exactos so cercanos y con un bajo error respecto al valore real, por lo menos en el caso de la constante $k$, ya que el valor de la gravedad cuenta con un mayor error aunque el valor teorico este dentro de la incertidumbre de la medicion.
+        De los valores obtenidos para la gravedad y la constante de elasticidad del resorte, se puede observar que los valores, aunque no exactos, son cercanos y con un bajo error respecto al valor real, por lo menos en el caso de la constante $k$, ya que el valor de la gravedad cuenta con un mayor error aunque el valor teórico este dentro de la incertidumbre de la medición.
 
-        Si bien el tratamiento torico llevado a cabo es el aplicable modelos de sistemas no amortiguados, el sistema experimental realmente trabajado si cuenta con amoritguamiento como se pudo observar en las graficas anteriormente presentadas, mas sin embargo por los valores experimentales obtenidos para la gravedad y la constante de elasticicdad del resorte que aunque como se discutio anteriormente no son del todo certeros se puede decir que la simplificacion del modelo realizado para el sistema es valida y permite obtener buenos resultados sin un extenso trabajo teorico.
+        Si bien el tratamiento tórico llevado a cabo es el aplicable a modelos de sistemas no amortiguados, el sistema experimental realmente trabajado si cuenta con amortiguamiento, como se pudo observar en las gráficas anteriormente presentadas, más sin embargo, por los valores experimentales obtenidos para la gravedad y la constante de elasticidad del resorte que aunque como se discutió anteriormente no son del todo certeros se puede decir que la simplificación del modelo realizado para el sistema es válida y permite obtener buenos resultados sin un extenso trabajo teórico.
 \end{document}

@@ -1,0 +1,84 @@
+\documentclass[10pt]{article}
+\usepackage{sdss2020}
+\usepackage{url}
+\usepackage{latexsym}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{algorithm, algorithmic}  
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage[spanish]{babel}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+
+\title{
+    DIFRACCIÓN DE ELECTRONES EN UNA RED POLICRISTALINA\\
+    Universidad del Valle \\
+    Departamento de Física, experimentación en Física III
+}
+
+\author{
+    Nicolás Aguilera García \\
+    {\tt 2021273030} \\
+    \And
+    Andrés Felipe Valencia Fonseca \\
+    {\tt 202125166} \\
+    \And
+    Kevin Giraldo Hincapie\\
+    {\tt 202024236} \\
+}
+
+\date{}
+
+
+
+
+\begin{document}
+    \maketitle
+
+    \begin{abstract}
+        En esta práctica de laboratorio se analiza el comportamiento de un sistema de dos péndulos acoplados mediante el resorte, esto con el fin de determinar experimentalmente las frecuencias de los modos normales del sistema junto con los valores para constantes como la gravedad y la constante de elasticidad del resorte. Tras el análisis realizado se logró determinar que $g = 11.68 \pm 1.82$ y $k = 2.811 \pm 0.78$.
+
+            {\bf Keywords: } Péndulo acoplado, resorte, oscilaciones, frecuencia.
+    \end{abstract}
+
+    \section{Análisis de datos}
+        
+    \begin{table}[H]
+        \centering
+        \resizebox{3.4in}{!} {
+            \begin{tabular}{cccc}
+                \hline
+                \multicolumn{1}{l|}{U (kV)} & \multicolumn{1}{l|}{$D_1 \pm \delta D_1$ (cm)}    & \multicolumn{1}{l|}{$\lambda_1 \pm \delta \lambda_1 $ (pm)}   & $\lambda_{1,teorica}$ (pm) \\ \hline
+                $2.9$                       & $3.91 \pm 0.10$                                           & $30.85 \pm 1.64$                                                       & $ 22.80 $                      \\
+                $3.5$                       & $3.24 \pm 0.10$                                           & $25.56 \pm 1.62$                                                       & $ 20.75 $                      \\
+                $4.0$                       & $2.64 \pm 0.10$                                           & $20.79 \pm 1.61$                                                       & $ 19.41 $                      \\
+                $4.5$                       & $2.56 \pm 0.10$                                           & $20.16 \pm 1.61$                                                       & $ 18.30 $                      \\ \hline
+            \end{tabular}
+        }
+        \label{tab:datosD1}
+        \caption{Medicion del diametro $D_1$ y su correspondiente longitud de onda $\lambda_1$ determindas experimentalmente y su valor teórico.}
+    \end{table}
+
+    \begin{table}[H]
+        \centering
+        \resizebox{3.4in}{!} {
+            \begin{tabular}{cccc}
+                \hline
+                \multicolumn{1}{l|}{U (kV)} & \multicolumn{1}{l|}{$D_2 \pm \delta D_2$ (cm)}    & \multicolumn{1}{l|}{$\lambda_2 \pm \delta \lambda_2 $ (pm)}   & $\lambda_{2,teorica}$ (pm) \\ \hline
+                $2.9$                       & $5.31 \pm 0.10$                                           & $24.19 \pm 0.98$                                                       & $ 22.80 $                      \\
+                $3.5$                       & $4.83 \pm 0.10$                                           & $22.00 \pm 0.97$                                                       & $ 20.75 $                      \\
+                $4.0$                       & $4.67 \pm 0.10$                                           & $21.26 \pm 0.96$                                                       & $ 19.41 $                      \\
+                $4.5$                       & $4.37 \pm 0.10$                                           & $19.88 \pm 0.96$                                                       & $ 18.30 $                      \\ \hline
+            \end{tabular}
+        }
+        \label{tab:datos}D2
+        \caption{Medicion del diametro $D_2$ y su correspondiente longitud de onda $\lambda_2$ determindas experimentalmente y su valor teórico.}
+    \end{table}
+
+    \section{Conclusiones}
+        De los valores obtenidos para la gravedad y la constante de elasticidad del resorte, se puede observar que los valores, aunque no exactos, son cercanos y con un bajo error respecto al valor real, por lo menos en el caso de la constante $k$, ya que el valor de la gravedad cuenta con un mayor error aunque el valor teórico este dentro de la incertidumbre de la medición.
+
+        Si bien el tratamiento tórico llevado a cabo es el aplicable a modelos de sistemas no amortiguados, el sistema experimental realmente trabajado si cuenta con amortiguamiento, como se pudo observar en las gráficas anteriormente presentadas, más sin embargo, por los valores experimentales obtenidos para la gravedad y la constante de elasticidad del resorte que aunque como se discutió anteriormente no son del todo certeros se puede decir que la simplificación del modelo realizado para el sistema es válida y permite obtener buenos resultados sin un extenso trabajo teórico.
+\end{document}

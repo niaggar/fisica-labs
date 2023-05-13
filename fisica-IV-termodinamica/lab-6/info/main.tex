@@ -1,0 +1,67 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{graphicx,graphics}
+\usepackage[spanish, es-tabla]{babel}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[center]{titlesec}
+\usepackage[table,xcdraw]{xcolor}
+
+\geometry{top=2cm, bottom=2cm, left=1.5cm, right=1.5cm}
+\spanishdecimal{,}
+\setlength{\parskip}{0mm}
+
+\renewcommand{\thesection}{\large\Roman{section}}
+\renewcommand{\thesubsection}{\large\Alph{subsection}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\title{
+    \textbf TITULO
+}
+\author{
+    \normalsize{
+        \emph{Andrés F. Valencia Fonseca}$^{1}$,
+        \emph{Nicolás Aguilera García}$^{2}$
+    } \\
+    \normalsize{
+        \emph{Departamento de Física, Universidad del Valle, Cali, Colombia}
+    } \\
+    \small{$^{1}$2125166, $^{2}$21273030}
+}
+\date{(\small 13 de mayo de 2023)}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+
+\end{abstract}
+
+\begin{multicols*}{2}
+    \section{\small INTRODUCCIÓN}
+    
+
+    \section{\small METODOLOGÍA}
+
+    \section{\small ANÁLISIS Y RESULTADOS}
+
+    \section{\small CONCLUSIONES}
+
+
+
+
+    \nocite{giancoli}
+    \nocite{montiel2015física}
+
+    \bibliographystyle{elsarticle-num}
+    \bibliography{bib}
+\end{multicols*}
+\end{document}

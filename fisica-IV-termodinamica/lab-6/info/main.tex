@@ -47,13 +47,84 @@
 
 \begin{multicols*}{2}
     \section{\small INTRODUCCIÓN}
-    
+
+    \subsection*{\small Calor latente de fusión del hielo}
+    Calor resultante de un proceso de cambio de temperatura: % Tener en cuenta
+
+    \begin{equation}
+        \begin{split}
+            Q &= m \, c \, \Delta T \\
+            &= m \, c \, (T_2 - T_1)
+        \end{split}
+        \label{eq:flujo_calor}
+    \end{equation}
+
+    Donde $Q$ es el flujo de energia termica (Calor), $m$ es la masa de la sustancia, $c$ es la capacidad calorifica de la sustancia y $\Delta T$ es la diferencia de temperatura entre el estado inicial y el estado final de la sustancia.
+
+    \subsection*{\small Calor latente de fusión del hielo}
+    La materia se presenta en diferentes fases, las cuales pueden variar en función de las condiciones de presión y temperatura a las que se someta. A este proceso se le denomina cambio de fase o estado (siempre y cuando no ocurra un cambio en la composición). Estos cambios de estado no ocurren de forma espontánea y requieren un aporte o liberación de energía, conocida como calor latente, que representa la energía calórica necesaria para que una sustancia cambie de estado sin que su temperatura varíe durante el proceso.
+
+    La ecuación que modela este proceso en una sustancia es la siguiente:
+
+    \begin{equation}
+        Q_f = m \, L_f
+        \label{eq:calor_latente}
+    \end{equation}
+
+    Donde $Q$ es la cantidad de calor requerida para fundir la sustancia, $m$ es la masa de la sustancia y $L_f$ es el calor latente de fusión de la sustancia.
+
+    En este laboratorio se busca determinar el calor latente de fusión del hielo, el cual es la energía calórica requerida para que el agua ($H_2O$) cambie de fase sólida (hielo) a fase líquida.
+
 
     \section{\small METODOLOGÍA}
+    Los procesos que se llevaron a cabo en este laboratorio fueron los siguientes:
+
+    \begin{itemize}
+        \item \textbf{Calor latente de fusión del hielo}
+
+            Para determinar el calor latente de fusión, se utiliza la ecuación \ref{eq:calor_latente}, la cual requiere que se determine el calor necesario para fundir una cantidad de hielo. Para ello, se utiliza un calorímetro de masa $M'$, el cual se encuentra aislado térmicamente y cuya capacidad calórica ($c_{cal}$) es conocida. Se agrega una masa de agua $M$ con capacidad calorífica $c_{agua}$ y temperatura inicial $T_2$, que se mezcla con una masa de hielo $m$ a temperatura inicial $T_0$. Tras la mezcla, se espera un tiempo prudencial hasta que la totalidad del hielo se haya fundido completamente, y se toma la temperatura $T$ del agua, la cual se encuentra en equilibrio térmico. Con estos datos, se procede a calcular el calor latente de fusión del hielo.
+
+            El cálculo se realiza a partir del hecho de que, dado que el calorímetro se encuentra aislado térmicamente, se puede afirmar que:
+            
+            \begin{equation}
+                Q_{ganado} = Q_{cedido}
+                \label{eq:calor_latente_1}
+            \end{equation}
+
+            Donde $Q_{ganado}$ es el flujo de calor dado por el hielo y el agua resultante del hielo fundido, mientras que $Q_{cedido}$ es el flujo de calor dado por el calorímetro y el agua inicialmente contenida en él. Si se toma en cuenta la ecuación \ref{eq:flujo_calor}, el calor ganado y cedido pueden expresarse como:
+
+            \begin{equation}
+                \begin{split}
+                    Q_{ganado} &= m \, c_{agua} \, (T - 0) + m \, L_f + m \, c_{hielo} \, (0 - T_0)\\
+                    Q_{cedido} &= (M \, c_{agua} + M' \, c_{cal}) \, (T_2 - T)
+                \end{split}
+                \label{eq:calor_latente_2}
+            \end{equation}
+
+            Al reemplazar estos valores en la ecuación \ref{eq:calor_latente_1} y despejar el valor buscado ($L_f$), se obtiene:
+
+            \begin{equation}
+                \begin{split}
+                    L_f &= A - B \\
+                    A &= \frac{(M \, c_{agua} + M' \, c_{cal}) \, (T_2 - T)}{m} \\
+                    B &= c_{agua} \, (T - 0) + c_{hielo} \, (0 - T_0)
+                \end{split}
+                \label{eq:calor_latente_3}
+            \end{equation}
+
+            De esta forma, con los datos obtenidos en el laboratorio, se determina entonces el calor latente de fusión del hielo.
+    \end{itemize}
+
+
+
 
     \section{\small ANÁLISIS Y RESULTADOS}
+        \subsection*{\small Calor latente de fusión del hielo}
+        Con los resultados obtenidos en el laboratorio, se procede a calcular el calor latente de fusión del hielo. Para ello, se toman los siguientes valores:
 
     \section{\small CONCLUSIONES}
+
+
 
 
 

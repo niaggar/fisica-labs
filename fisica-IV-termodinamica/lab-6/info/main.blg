@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: elsarticle-num.bst
+Database file #1: bib.bib
+Warning--empty author in calorLatente
+You've used 3 entries,
+            2952 wiz_defined-function locations,
+            686 strings with 5571 characters,
+and the built_in function-call counts, 686 in all, are:
+= -- 52
+> -- 9
+< -- 1
++ -- 5
+- -- 2
+* -- 33
+:= -- 101
+add.period$ -- 3
+call.type$ -- 3
+change.case$ -- 1
+chr.to.int$ -- 0
+cite$ -- 4
+duplicate$ -- 25
+empty$ -- 103
+format.name$ -- 2
+if$ -- 190
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 5
+newline$ -- 19
+num.names$ -- 2
+pop$ -- 30
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 49
+stack$ -- 0
+substring$ -- 0
+swap$ -- 4
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 2
+width$ -- 4
+write$ -- 31
+(There was 1 warning)

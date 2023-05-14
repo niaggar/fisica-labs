@@ -29,7 +29,7 @@
 
 \providecommand{\abs}[1]{\lvert#1\rvert}
 \title{
-    \textbf TITULO
+    \textbf Determinación experimental del calor específico de metales y el calor latente de fusión del hielo
 }
 \author{
     \normalsize{
@@ -46,150 +46,327 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-
+    El objetivo de este laboratorio es determinar el calor
+    específico de varios metales, aluminio, cobre y hierro, y el calor latente de fusión del hielo. Se utilizaron
+    métodos de calentamiento y enfriamiento para medir el calor específico de los
+    metales, mientras que el método de fusión se empleó para determinar el calor latente del hielo.
+    Los resultados experimentales obtenidos para el calor específico de los metales
+    fueron consistentes con los valores teóricos de referencia, obteniendo que para el aluminio el calor especifico es
+    de  $0.207 , cal/\,g\,^oC$, para el cobre de $0.099 , cal/\,g\,^oC$, y para el
+    hierro de $0.117 , cal/\,g\,^oC$, reportando un error porcentual
+    en general menor a $7\%$ lo que indica la precisión del método utilizado y la validación
+    del marco teorico. Además, se observó que cada metal tenía un
+    calor específico único, lo que sugiere diferencias en su capacidad para
+    almacenar calor.
+    En cuanto al calor latente del hielo, el valor promedio del mismo se calcula
+    de $L_f = 75.26 , cal / g$ con una desviación estándar de $6.35$ y un
+    porcentaje de error del $5.92 \%$ atribuidos a
+    errores experimentales. Los obtenidos experimentales se
+    aproximaron al valor aceptado de referencia y destacan su importancia para
+    caracterizar la transición de fase del hielo. Estos resultados resaltan la relevancia
+    de comprender las propiedades térmicas de los materiales y su aplicación en campos
+    como la ingeniería y la ciencia de los materiales.
 \end{abstract}
 
 \begin{multicols*}{2}
     \section{\small INTRODUCCIÓN}
     \subsection*{\small Calor especifico de metales}
-        Calor resultante de un proceso de cambio de temperatura: % Tener en cuenta
+    El calor específico es una propiedad fundamental de los materiales que
+    determina su capacidad para almacenar calor. El
+    calor específico varía de un material a otro y se define como la cantidad de
+    calor necesaria para elevar la temperatura de una unidad de masa de dicho
+    material en una unidad de temperatura, este se relaciona matematicamente como sigue:
 
-        \begin{equation}
-            \begin{split}
-                Q &= m \, c \, \Delta T \\
-                &= m \, c \, (T_2 - T_1)
-            \end{split}
-            \label{eq:flujo_calor}
-        \end{equation}
+    \begin{equation}
+        \begin{split}
+            Q &= m \, c \, \Delta T \\
+            &= m \, c \, (T_2 - T_1)
+        \end{split}
+        \label{eq:flujo_calor}
+    \end{equation}
 
-        Donde $Q$ es el flujo de energia termica (Calor), $m$ es la masa de la sustancia, $c$ es la capacidad calorifica de la sustancia y $\Delta T$ es la diferencia de temperatura entre el estado inicial y el estado final de la sustancia.
-
+    Donde $Q$ es el flujo de energia termica (Calor), $m$ es la masa de la
+    sustancia, $c$ es la capacidad calorifica de la sustancia y $\Delta T$ es la
+    diferencia de temperatura entre el estado inicial y el estado final de la
+    sustancia.\\
+    El objetivo principal es caracterizar la capacidad de estos
+    metales para absorber y liberar calor en función de su masa y temperatura.
+    Para ello, se estudiaran 3 materiales en principio desconocnidos, los cuales se identificaran, 
+    conociendo su calor especifico, y comparando con los valores registrados de referencia.
 
     \subsection*{\small Calor latente de fusión del hielo}
-        La materia se presenta en diferentes fases, las cuales pueden variar en función de las condiciones de presión y temperatura a las que se someta. A este proceso se le denomina cambio de fase o estado (siempre y cuando no ocurra un cambio en la composición) \cite{calorLatente}. Estos cambios de estado no ocurren de forma espontánea y requieren un aporte o liberación de energía, conocida como calor latente, que representa la energía calórica necesaria para que una sustancia cambie de estado sin que su temperatura varíe durante el proceso.
+    La materia se presenta en diferentes fases, las cuales pueden variar en función
+    de las condiciones de presión y temperatura a las que se someta. A este proceso
+    se le denomina cambio de fase o estado (siempre y cuando no ocurra un cambio en
+    la composición) \cite{calorLatente}. Estos cambios de estado no ocurren de
+    forma espontánea y requieren un aporte o liberación de energía, conocida como
+    calor latente, que representa la energía calórica necesaria para que una
+    sustancia cambie de estado sin que su temperatura varíe durante el proceso.
 
-        La ecuación que modela este proceso en una sustancia es la siguiente \cite{calorLatente}:
+    La ecuación que modela este proceso en una sustancia es la siguiente
+    \cite{calorLatente}:
 
-        \begin{equation}
-            Q_f = m \, L_f
-            \label{eq:calor_latente}
-        \end{equation}
+    \begin{equation}
+        Q_f = m \, L_f
+        \label{eq:calor_latente}
+    \end{equation}
 
-        Donde $Q$ es la cantidad de calor requerida para fundir la sustancia, $m$ es la masa de la sustancia y $L_f$ es el calor latente de fusión de la sustancia.
+    Donde $Q$ es la cantidad de calor requerida para fundir la sustancia, $m$ es la
+    masa de la sustancia y $L_f$ es el calor latente de fusión de la sustancia.
 
-        En este laboratorio se busca determinar el calor latente de fusión del hielo, el cual es la energía calórica requerida para que el agua ($H_2O$) cambie de fase sólida (hielo) a fase líquida.
-
+    En este laboratorio se busca determinar el calor latente de fusión del hielo,
+    el cual es la energía calórica requerida para que el agua ($H_2O$) cambie de
+    fase sólida (hielo) a fase líquida.
 
     \section{\small METODOLOGÍA}
     Los procesos que se llevaron a cabo en este laboratorio fueron los siguientes:
 
     \begin{itemize}
         \item \textbf{Calor especifico de metales:}
-        
-            El proceso para determinar el calor especifio de los tres diferentes metales utilizados como muestras consiste en primeramente determinar la masa de cada uno de los metales a utilizar, la masa del calorimetro y la masa del agua que estara dentro del calorimetro. Luego de esto, se procede a calentar los metales en un baño de agua hirviendo (llegando a temperaturas de $97 \, ^oC$), para posteriormente sumergirlos en el calorímetro con agua a temperatura ambiente.
-            
-            Tras esto, se espera a que el sistema se encuentre en equilibrio térmico, y se toma la temperatura final del sistema. Con estos datos, se procede a calcular el calor específico de cada metal mediante. Dado que el calorímetro se encuentra aislado térmicamente, se puede afirmar que en el sistema:
 
-            \begin{equation}
-                Q_{ganado} = Q_{cedido}
-                \label{eq:relacion_calor}
-            \end{equation}
+              El proceso para determinar el calor especifio de los tres diferentes metales
+              utilizados como muestras consiste en primeramente determinar la masa de cada
+              uno de los metales a utilizar, la masa del calorimetro y la masa del agua que
+              estara dentro del calorimetro. Luego de esto, se procede a calentar los metales
+              en un baño de agua hirviendo (llegando a temperaturas de $97 \, ^oC$), para
+              posteriormente sumergirlos en el calorímetro con agua a temperatura ambiente
+              $T_0$.
 
-            Donde $Q_{ganado}$ es el calor ganado por el agua y el calorímetro, y $Q_{cedido}$ es el calor cedido por el metal. El calor ganado por el agua, el calorímetro y el metal se calcula mediante la ecuación \ref{eq:flujo_calor}. Reemplazando y despejado el calor especifico del metal se obtiene la siguiente ecuación que permite realizar el calculo mediante los datos obtenidos experimentalmente:
+              Tras esto, se espera a que el sistema se encuentre en equilibrio térmico, y se
+              toma la temperatura final del sistema $T_e$. Con estos datos, se procede a
+              calcular el calor específico de cada metal. Dado que el calorímetro se
+              encuentra aislado térmicamente, se puede afirmar que en el sistema:
 
-            \begin{equation*}
-                c_{m} = \frac{M_{agua} \, c_{agua} + M_{cal} \, c_{cal} + M_{agi} \, c_{agi}}{M_{metal} \, (T_{metal} - T_{e})} \cdot (T_{equ} - T_{0})
-                \label{eq:calor_especifico}
-            \end{equation*}
+              \begin{equation}
+                  Q_{ganado} = Q_{cedido}
+                  \label{eq:relacion_calor}
+              \end{equation}
+
+              Donde $Q_{ganado}$ es el calor ganado por el agua y el calorímetro, y
+              $Q_{cedido}$ es el calor cedido por el metal. El calor ganado por el agua, el
+              calorímetro y el metal se calcula mediante la ecuación \ref{eq:flujo_calor}.
+              Reemplazando y despejado el calor especifico del metal se obtiene la siguiente
+              ecuación que permite realizar el calculo mediante los datos obtenidos
+              experimentalmente:
+
+              \begin{equation}
+                  c_{m} = \frac{M_{agua} \, c_{agua} + M_{cal} \, c_{cal} + M_{agi} \, c_{agi}}{M_{metal} \, (T_{metal} - T_{e})} \cdot (T_{e} - T_{0})
+                  \label{eq:calor_especifico}
+              \end{equation}
 
         \item \textbf{Calor latente de fusión del hielo:}
 
-            Para determinar el calor latente de fusión, se utiliza la ecuación \ref{eq:calor_latente}, la cual requiere que se determine el calor necesario para fundir una cantidad de hielo. Para ello, se utiliza un calorímetro de masa $M'$, el cual se encuentra aislado térmicamente y cuya capacidad calórica ($c_{cal}$) es conocida. Se agrega una masa de agua $M$ con capacidad calorífica $c_{agua}$ y temperatura inicial $T_2$, que se mezcla con una masa de hielo $m$ a temperatura inicial $T_0$. Tras la mezcla, se espera un tiempo prudencial hasta que la totalidad del hielo se haya fundido completamente, y se toma la temperatura $T$ del agua, la cual se encuentra en equilibrio térmico. Con estos datos, se procede a calcular el calor latente de fusión del hielo.
+              Para determinar el calor latente de fusión, se utiliza la ecuación
+              \ref{eq:calor_latente}, la cual requiere que se determine el calor necesario
+              para fundir una cantidad de hielo. Para ello, se utiliza un calorímetro de masa
+              $M'$, el cual se encuentra aislado térmicamente y cuya capacidad calórica
+              ($c_{cal}$) es conocida. Se agrega una masa de agua $M$ con capacidad
+              calorífica $c_{agua}$ y temperatura inicial $T_2$, que se mezcla con una masa
+              de hielo $m$ a temperatura inicial $T_0$. Tras la mezcla, se espera un tiempo
+              prudencial hasta que la totalidad del hielo se haya fundido completamente, y se
+              toma la temperatura $T$ del agua, la cual se encuentra en equilibrio térmico.
+              Con estos datos, se procede a calcular el calor latente de fusión del hielo.
 
-            El calculo al igual que en el caso anterior, se realiza mediante la ecuación \ref{eq:relacion_calor}, pero teniendo en cuenta que el calor ganado y cedido son diferentes.
+              El calculo al igual que en el caso anterior, se realiza mediante la ecuación
+              \ref{eq:relacion_calor}, pero teniendo en cuenta que el calor ganado y cedido
+              son diferentes.
 
-            Para este caso, el $Q_{ganado}$ es el flujo de calor dado por el hielo y el agua resultante del hielo fundido, mientras que $Q_{cedido}$ es el flujo de calor dado por el calorímetro y el agua inicialmente contenida en él. Si se toma en cuenta la ecuación \ref{eq:flujo_calor}, el calor ganado y cedido pueden expresarse como:
+              Para este caso, el $Q_{ganado}$ es el flujo de calor dado por el hielo y el
+              agua resultante del hielo fundido, mientras que $Q_{cedido}$ es el flujo de
+              calor dado por el calorímetro y el agua inicialmente contenida en él. Si se
+              toma en cuenta la ecuación \ref{eq:flujo_calor}, el calor ganado y cedido
+              pueden expresarse como:
 
-            \begin{equation}
-                \begin{split}
-                    Q_{ganado} &= m \, c_{agua} \, (T - 0) + m \, L_f + m \, c_{hielo} \, (0 - T_0)\\
-                    Q_{cedido} &= (M \, c_{agua} + M' \, c_{cal}) \, (T_2 - T)
-                \end{split}
-                \label{eq:calor_latente_2}
-            \end{equation}
+              \begin{equation}
+                  \begin{split}
+                      Q_{ganado} &= m \, c_{agua} \, (T - 0) + m \, L_f + m \, c_{hielo} \, (0 - T_0)\\
+                      Q_{cedido} &= (M \, c_{agua} + M' \, c_{cal}) \, (T_2 - T)
+                  \end{split}
+                  \label{eq:calor_latente_2}
+              \end{equation}
 
-            Al reemplazar estos valores en la ecuación \ref{eq:calor_latente_1} y despejar el valor buscado ($L_f$), se obtiene:
+              Al reemplazar estos valores en la ecuación \ref{eq:calor_latente_1} y despejar
+              el valor buscado ($L_f$), se obtiene:
 
-            \begin{equation}
-                \begin{split}
-                    L_f &= A - B \\
-                    A &= \frac{(M \, c_{agua} + M' \, c_{cal}) \, (T_2 - T)}{m} \\
-                    B &= c_{agua} \, (T - 0) + c_{hielo} \, (0 - T_0)
-                \end{split}
-                \label{eq:calor_latente_3}
-            \end{equation}
+              \begin{equation}
+                  \begin{split}
+                      L_f &= A - B \\
+                      A &= \frac{(M \, c_{agua} + M' \, c_{cal}) \, (T_2 - T)}{m} \\
+                      B &= c_{agua} \, (T - 0) + c_{hielo} \, (0 - T_0)
+                  \end{split}
+                  \label{eq:calor_latente_3}
+              \end{equation}
 
-            De esta forma, con los datos obtenidos en el laboratorio, se determina entonces el calor latente de fusión del hielo.
+              De esta forma, con los datos obtenidos en el laboratorio, se determina entonces
+              el calor latente de fusión del hielo.
     \end{itemize}
 
-
-
-
     \section{\small ANÁLISIS Y RESULTADOS}
-        \subsection*{\small Calor latente de fusión del hielo}
-        Con los resultados obtenidos en el laboratorio, se procede a calcular el calor latente de fusión del hielo. Para esto, se tienen además los siguientes datos:
+    \subsection*{\small Calor latente de fusión del hielo}
+    Con los resultados obtenidos en el laboratorio, se procede a calcular el calor
+    latente de fusión del hielo. Para esto, se tienen además los siguientes datos:
 
-        \begin{itemize}
-            \item $M' = 92.8 , g$
-            \item $c_{agua} = 1.00 , cal/g \cdot C^{-1}$
-            \item $c_{cal} = 0.22 , cal/g \cdot C^{-1}$
-            \item $c_{hielo} = 0.50 , cal/g \cdot C^{-1}$
-        \end{itemize}
+    \begin{itemize}
+        \item $M' = 92.8 , g$
+        \item $c_{agua} = 1.00 , cal/g \cdot C^{-1}$
+        \item $c_{cal} = 0.22 , cal/g \cdot C^{-1}$
+        \item $c_{hielo} = 0.50 , cal/g \cdot C^{-1}$
+    \end{itemize}
 
-        Los resultados se obtuvieron al realizar el proceso descrito en la metodología para tres masas de hielo diferentes, donde para cada masa se tomó una medida a alta temperatura (en un rango entre $37 , ^oC$ y $39 , ^oC$) y una a temperatura ambiente ($34 , ^oC$), obteniendo un total de 6 medidas. Los resultados obtenidos se muestran en la Tabla \ref{tab:calor_latente}.
+    Los resultados se obtuvieron al realizar el proceso descrito en la metodología
+    para tres masas de hielo diferentes, donde para cada masa se tomó una medida a
+    alta temperatura (en un rango entre $37 , ^oC$ y $39 , ^oC$) y una a
+    temperatura ambiente ($34 , ^oC$), obteniendo un total de 6 medidas. Los
+    resultados obtenidos se muestran en la Tabla \ref{tab:calor_latente}.
 
-        \begin{table}[H]
-            \centering
-            \caption{Resultados obtenidos para el calor latente de fusión del hielo.}
-            \begin{tabular}{ccccccc}
-                \hline\hline
-                \textbf{$M$} & \textbf{$m$} & \textbf{$T_2$} & \textbf{$T_0$} & \textbf{$T$} & \textbf{$L_f$} & \textbf{$\% Error$} \\
-                \small $[g]$ & \small $[g]$ & \small $[^oC]$ & \small $[^oC]$ & \small $[^oC]$ & \small $[cal / g]$ &  \\
-                \hline\hline
-                $147.75$ & $14.31$ & $37$ & $7$ & $28$ & $81.26$ & $1.58$ \\
-                $163.13$ & $14.62$ & $24$ & $7$ & $17$ & $74.38$ & $7.02$ \\
-                \hline
-                $182.91$ & $6.11$ & $39$ & $7$ & $36$ & $67.33$ & $15.83$ \\
-                $177.08$ & $6.85$ & $24$ & $7$ & $21$ & $68.99$ & $13.76$ \\
-                \hline
-                $161.00$ & $5.04$ & $38$ & $7$ & $35$ & $76.49$ & $4.39$ \\
-                $224.65$ & $4.80$ & $24$ & $6$ & $22$ & $83.11$ & $3.89$ \\
-                \hline
-            \end{tabular}
-            \caption*{\textit{Nota:} El porcentaje de error se calculo respecto al valor teórico del calor latente de fusión del hielo, el cual es $80 \, cal / g$ dado en la guia de laboratorio.}
-            \label{tab:calor_latente}
-        \end{table}
+    \begin{table}[H]
+        \centering
+        \caption{Resultados obtenidos para el calor latente de fusión del hielo.}
+        \begin{tabular}{ccccccc}
+            \hline\hline
+            \textbf{$M$} & \textbf{$m$} & \textbf{$T_2$} & \textbf{$T_0$} & \textbf{$T$}   & \textbf{$L_f$}     & \textbf{$\% Error$} \\
+            \small $[g]$ & \small $[g]$ & \small $[^oC]$ & \small $[^oC]$ & \small $[^oC]$ & \small $[cal / g]$ &                     \\
+            \hline\hline
+            $147.75$     & $14.31$      & $37$           & $7$            & $28$           & $81.26$            & $1.58$              \\
+            $163.13$     & $14.62$      & $24$           & $7$            & $17$           & $74.38$            & $7.02$              \\
+            \hline
+            $182.91$     & $6.11$       & $39$           & $7$            & $36$           & $67.33$            & $15.83$             \\
+            $177.08$     & $6.85$       & $24$           & $7$            & $21$           & $68.99$            & $13.76$             \\
+            \hline
+            $161.00$     & $5.04$       & $38$           & $7$            & $35$           & $76.49$            & $4.39$              \\
+            $224.65$     & $4.80$       & $24$           & $6$            & $22$           & $83.11$            & $3.89$              \\
+            \hline
+        \end{tabular}
+        \caption*{}
+        \label{tab:calor_latente}
+    \end{table}
 
-        De estos resultados se puede observar que no existe una relación entre la certeza del resultado y la temperatura inicial utilizada para el agua. Si se revisan los resultados por las masas utilizadas, se obtiene lo siguiente:
+    De estos resultados se puede observar que no existe una relación entre la
+    certeza del resultado y la temperatura inicial utilizada para el agua. Si se
+    revisan los resultados por las masas utilizadas, se obtiene lo siguiente:
 
-        \begin{itemize}
+    \begin{itemize}
         \item $m \approx 14.6 , g$: Desviación estándar de $4.87$, el valor promedio es de $L_f = 77.82 , cal / g$ y un porcentaje de error del $2.72 \%$.
         \item $m \approx 6.8 , g$: Desviación estándar de $1.17$, el valor promedio es de $L_f = 68.16 , cal / g$ y un porcentaje de error del $14.79 \%$.
         \item $m \approx 5.0 , g$: Desviación estándar de $4.68$, el valor promedio es de $L_f = 79.80 , cal / g$ y un porcentaje de error del $0.25 \%$.
-        \end{itemize}
+    \end{itemize}
 
-        Se puede observar que los resultados concuerdan con el valor teórico, siendo bastante más preciso el obtenido para $m \approx 5.0 , g$. Sin embargo, al igual que en el caso de la temperatura, no se observa una relación entre la masa y la certeza del resultado.
+    Se puede observar que los resultados concuerdan con el valor teórico, siendo
+    bastante más preciso el obtenido para $m \approx 5.0 , g$. Sin embargo, al
+    igual que en el caso de la temperatura, no se observa una relación entre la
+    masa y la certeza del resultado.
 
-        En cuanto al valor promedio del calor latente de fusión del hielo, se obtiene que es de $L_f = 75.26 , cal / g$ con una desviación estándar de $6.35$ y un porcentaje de error del $5.92 \%$. Se trata de un resultado aceptable, cuyo error se debe a errores de medición en las masas y las temperaturas. Se podría decir que principalmente en la medida de la masa del hielo, ya que mientras se pesa y se toma la temperatura, ya ha iniciado el proceso de fusión del hielo, lo que reduce la masa final del hielo que será utilizada.
+    En cuanto al valor promedio del calor latente de fusión del hielo, se obtiene
+    que es de $L_f = 75.26 , cal / g$ con una desviación estándar de $6.35$ y un
+    porcentaje de error del $5.92 \%$. Se trata de un resultado aceptable, cuyo
+    error se debe a errores de medición en las masas y las temperaturas. Se podría
+    decir que principalmente en la medida de la masa del hielo, ya que mientras se
+    pesa y se toma la temperatura, ya ha iniciado el proceso de fusión del hielo,
+    lo que reduce la masa final del hielo que será utilizada.
+    \subsection*{\small Calor especifico de metales}
 
-    
+    Para el caso del calor especifico de los metales, se tiene que los datos
+    previos a las mediciones, son los siguientes:
+
+    \begin{itemize}
+        \item $M_{cal} = 54,35 , g$
+        \item $M_{agua} = 27,87 , g$
+        \item $c_{agua} = 1.00 , cal/g \cdot C^{-1}$
+        \item $c_{cal} = 0.22 , cal/g \cdot C^{-1}$
+        \item $c_{agi} = 0.22 , cal/g \cdot C^{-1}$
+    \end{itemize}
+
+    Tras realizar el proceso descrito en la metodología, para medir el calor
+    especifico de 3 metales, en principio desconocidos, pero que tras el calculo
+    obtenido, se pudo determinar de que metales se trataba comparando los
+    resultados con los valores consignados de distintos materiales en la
+    lieteratura, se concluye que estos son aluminio, cobre y hierro. Así entonces
+    se tienen los siguientes datos obtenidos del experimento, necesarios para el
+    calculo. Teniendo en consideración que el experimento se realizo a una
+    temperatura inicial de cada metal $T_{metal}$ al rededor de $95 , ^oC$, y la
+    temperatura inicial del vaso, y del agua, $T_{0} = 26 , ^oC$. A continuación se
+    presentan los datos en la tabla \ref{tab:calor_especifico}.
+
+    \begin{table}[H]
+        \centering
+        \caption{Datos obtenidos para el calculo del calor especifico de los metales.}
+        \begin{tabular}{cccccc}
+            \hline\hline
+            \textbf{$Metal$} & \textbf{$M_{agua}$} & \textbf{$M_{metal}$} & \textbf{$T_0$} & \textbf{$T_{metal}$} & \textbf{$T_e$} \\
+            \small           & \small $[g]$        & \small $[g]$         & \small $[^oC]$ & \small $[^oC]$       & \small $[^oC]$ \\
+            \hline\hline
+            $Alummio$        & $165,16$            & $157,64$             & $26$           & $92$                 & $36$           \\
+            \hline
+            $Cobre$          & $159,24$            & $164,46$             & $26$           & $97$                 & $32$           \\
+            \hline
+            $Hierro$         & $182,8$             & $157,17$             & $26$           & $97$                 & $32$           \\
+            \hline
+        \end{tabular}
+        \caption*{}
+        \label{tab:calor_especifico}
+    \end{table}
+
+    Una vez tabulado los datos, se calcula el calor especifico de cada metal,
+    utilizando la expresión \ref{eq:calor_especifico} con su correspondiente
+    desviación porcentual, y se obtiene lo siguiente, tabla
+    \ref{tab:calor_especifico_resultados}.
+
+    \begin{table}[H]
+        \centering
+        \caption{Resultados obtenidos para el calor especifico de los metales.}
+        \begin{tabular}{cccc}
+            \hline\hline
+            \textbf{$Metal$} & \textbf{$C$}            & \textbf{$C_{exp}$}      & \textbf{$Desviacion \, porcentual$} \\
+            \small           & \small $[cal/\,g\,^oC]$ & \small $[cal/\,g\,^oC]$ &                                     \\
+            \hline\hline
+            $Alummio$        & $0,214$                 & $0,207$                 & $3\%$                               \\
+            \hline
+            $Cobre$          & $0,093$                 & $0,099$                 & $7\%$                               \\
+            \hline
+            $Hierro$         & $0,11$                  & $0,117$                 & $7\%$                               \\
+            \hline
+        \end{tabular}
+        \caption*{}
+        \label{tab:calor_especifico_resultados}
+    \end{table}
+
+    Se puede notar, que los valores son aceptables con un error porcentual de entre
+    $3\%$ y $ 7\%$l comparado con los convencionalmente verdaderos. El error se
+    atribuye a fallas de medición en las masas y las temperaturas, en especial la
+    temperatura inicial del metal, ya que al momento de introducirlo al
+    calorimetro, este se enfriaba rápidamente, lo cual afecta el resultado final.
+    Aún así se puede concluir que los resultados representan de manera valida el
+    calor especifico de los metales. Es importante resaltar que el calor especifico
+    del alummio es mayor al resto debido a que este metal es menos denso que los
+    demas, por lo que se requiere de mayor energía para el intercambio de calor.
+
     \section{\small CONCLUSIONES}
-    En general, se puede concluir que los resultados obtenidos tienen una precisión aceptable, ya que el porcentaje de error es en su mayoría inferior al $10 \%$. Sin embargo, se observa que para algunas medidas el porcentaje de error es significativamente mayor, lo que puede deberse a errores en la medición o a factores externos que afectaron el proceso. 
+    En este experimento, se realizaron mediciones y cálculos para determinar el
+    calor específico de varios metales y el calor latente de fusión del hielo. Los
+    resultados obtenidos proporcionan información valiosa sobre las propiedades
+    térmicas de estos materiales.\\
 
+    En primer lugar, se llevó a cabo la determinación del calor latente del hielo
+    mediante el método de fusión. Los resultados obtenidos mostraron una
+    correspondencia cercana con el valor aceptado de referencia para el calor
+    latente del hielo. Esto indica que el método utilizado fue efectivo para medir
+    el calor latente, lo cual es un parámetro importante para caracterizar la
+    transición de fase de una sustancia.\\
 
+    Por otro lado, se determinó el calor específico de los metales mediante el
+    método de calentamiento y enfriamiento. Los valores experimentales obtenidos
+    para cada metal fueron consistentes con los datos teóricos de referencia. Esto
+    sugiere que el método utilizado fue preciso y confiable. Además, se observó que
+    el calor específico varía según el metal, lo que indica que cada uno tiene una
+    capacidad única para almacenar calor.\\
 
-
-
+    En general, se puede concluir que los resultados obtenidos tienen una precisión
+    aceptable, ya que el porcentaje de error es en su mayoría inferior al $10 \%$.
+    Sin embargo, se observa que para algunas medidas el porcentaje de error es
+    significativamente mayor, lo que puede deberse a errores en la medición o a
+    factores externos que afectaron el proceso, como se menciona, la temperatura
+    inicial del metal, y la masa inicial del hielo, fueron problemas significativos
+    en el experimento.\\
 
     \nocite{giancoli}
     \nocite{montiel2015física}

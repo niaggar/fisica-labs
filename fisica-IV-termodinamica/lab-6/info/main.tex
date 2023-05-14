@@ -2,7 +2,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
 \usepackage{graphicx,graphics}
-\usepackage[spanish, es-tabla]{babel}
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{url}
@@ -13,6 +12,10 @@
 \usepackage{multirow}
 \usepackage{textcomp}
 \usepackage{gensymb}
+\usepackage{hhline}
+\usepackage{array}
+\usepackage{caption}
+\usepackage[spanish, es-tabla]{babel}
 \usepackage[center]{titlesec}
 \usepackage[table,xcdraw]{xcolor}
 
@@ -20,6 +23,7 @@
 \spanishdecimal{,}
 \setlength{\parskip}{0mm}
 
+\renewcommand{\arraystretch}{1.3}
 \renewcommand{\thesection}{\large\Roman{section}}
 \renewcommand{\thesubsection}{\large\Alph{subsection}}
 
@@ -47,51 +51,64 @@
 
 \begin{multicols*}{2}
     \section{\small INTRODUCCIÓN}
+    \subsection*{\small Calor especifico de metales}
+        Calor resultante de un proceso de cambio de temperatura: % Tener en cuenta
+
+        \begin{equation}
+            \begin{split}
+                Q &= m \, c \, \Delta T \\
+                &= m \, c \, (T_2 - T_1)
+            \end{split}
+            \label{eq:flujo_calor}
+        \end{equation}
+
+        Donde $Q$ es el flujo de energia termica (Calor), $m$ es la masa de la sustancia, $c$ es la capacidad calorifica de la sustancia y $\Delta T$ es la diferencia de temperatura entre el estado inicial y el estado final de la sustancia.
+
 
     \subsection*{\small Calor latente de fusión del hielo}
-    Calor resultante de un proceso de cambio de temperatura: % Tener en cuenta
+        La materia se presenta en diferentes fases, las cuales pueden variar en función de las condiciones de presión y temperatura a las que se someta. A este proceso se le denomina cambio de fase o estado (siempre y cuando no ocurra un cambio en la composición) \cite{calorLatente}. Estos cambios de estado no ocurren de forma espontánea y requieren un aporte o liberación de energía, conocida como calor latente, que representa la energía calórica necesaria para que una sustancia cambie de estado sin que su temperatura varíe durante el proceso.
 
-    \begin{equation}
-        \begin{split}
-            Q &= m \, c \, \Delta T \\
-            &= m \, c \, (T_2 - T_1)
-        \end{split}
-        \label{eq:flujo_calor}
-    \end{equation}
+        La ecuación que modela este proceso en una sustancia es la siguiente \cite{calorLatente}:
 
-    Donde $Q$ es el flujo de energia termica (Calor), $m$ es la masa de la sustancia, $c$ es la capacidad calorifica de la sustancia y $\Delta T$ es la diferencia de temperatura entre el estado inicial y el estado final de la sustancia.
+        \begin{equation}
+            Q_f = m \, L_f
+            \label{eq:calor_latente}
+        \end{equation}
 
-    \subsection*{\small Calor latente de fusión del hielo}
-    La materia se presenta en diferentes fases, las cuales pueden variar en función de las condiciones de presión y temperatura a las que se someta. A este proceso se le denomina cambio de fase o estado (siempre y cuando no ocurra un cambio en la composición). Estos cambios de estado no ocurren de forma espontánea y requieren un aporte o liberación de energía, conocida como calor latente, que representa la energía calórica necesaria para que una sustancia cambie de estado sin que su temperatura varíe durante el proceso.
+        Donde $Q$ es la cantidad de calor requerida para fundir la sustancia, $m$ es la masa de la sustancia y $L_f$ es el calor latente de fusión de la sustancia.
 
-    La ecuación que modela este proceso en una sustancia es la siguiente:
-
-    \begin{equation}
-        Q_f = m \, L_f
-        \label{eq:calor_latente}
-    \end{equation}
-
-    Donde $Q$ es la cantidad de calor requerida para fundir la sustancia, $m$ es la masa de la sustancia y $L_f$ es el calor latente de fusión de la sustancia.
-
-    En este laboratorio se busca determinar el calor latente de fusión del hielo, el cual es la energía calórica requerida para que el agua ($H_2O$) cambie de fase sólida (hielo) a fase líquida.
+        En este laboratorio se busca determinar el calor latente de fusión del hielo, el cual es la energía calórica requerida para que el agua ($H_2O$) cambie de fase sólida (hielo) a fase líquida.
 
 
     \section{\small METODOLOGÍA}
     Los procesos que se llevaron a cabo en este laboratorio fueron los siguientes:
 
     \begin{itemize}
-        \item \textbf{Calor latente de fusión del hielo}
+        \item \textbf{Calor especifico de metales:}
+        
+            El proceso para determinar el calor especifio de los tres diferentes metales utilizados como muestras consiste en primeramente determinar la masa de cada uno de los metales a utilizar, la masa del calorimetro y la masa del agua que estara dentro del calorimetro. Luego de esto, se procede a calentar los metales en un baño de agua hirviendo (llegando a temperaturas de $97 \, ^oC$), para posteriormente sumergirlos en el calorímetro con agua a temperatura ambiente.
+            
+            Tras esto, se espera a que el sistema se encuentre en equilibrio térmico, y se toma la temperatura final del sistema. Con estos datos, se procede a calcular el calor específico de cada metal mediante. Dado que el calorímetro se encuentra aislado térmicamente, se puede afirmar que en el sistema:
+
+            \begin{equation}
+                Q_{ganado} = Q_{cedido}
+                \label{eq:relacion_calor}
+            \end{equation}
+
+            Donde $Q_{ganado}$ es el calor ganado por el agua y el calorímetro, y $Q_{cedido}$ es el calor cedido por el metal. El calor ganado por el agua, el calorímetro y el metal se calcula mediante la ecuación \ref{eq:flujo_calor}. Reemplazando y despejado el calor especifico del metal se obtiene la siguiente ecuación que permite realizar el calculo mediante los datos obtenidos experimentalmente:
+
+            \begin{equation*}
+                c_{m} = \frac{M_{agua} \, c_{agua} + M_{cal} \, c_{cal} + M_{agi} \, c_{agi}}{M_{metal} \, (T_{metal} - T_{e})} \cdot (T_{equ} - T_{0})
+                \label{eq:calor_especifico}
+            \end{equation*}
+
+        \item \textbf{Calor latente de fusión del hielo:}
 
             Para determinar el calor latente de fusión, se utiliza la ecuación \ref{eq:calor_latente}, la cual requiere que se determine el calor necesario para fundir una cantidad de hielo. Para ello, se utiliza un calorímetro de masa $M'$, el cual se encuentra aislado térmicamente y cuya capacidad calórica ($c_{cal}$) es conocida. Se agrega una masa de agua $M$ con capacidad calorífica $c_{agua}$ y temperatura inicial $T_2$, que se mezcla con una masa de hielo $m$ a temperatura inicial $T_0$. Tras la mezcla, se espera un tiempo prudencial hasta que la totalidad del hielo se haya fundido completamente, y se toma la temperatura $T$ del agua, la cual se encuentra en equilibrio térmico. Con estos datos, se procede a calcular el calor latente de fusión del hielo.
 
-            El cálculo se realiza a partir del hecho de que, dado que el calorímetro se encuentra aislado térmicamente, se puede afirmar que:
-            
-            \begin{equation}
-                Q_{ganado} = Q_{cedido}
-                \label{eq:calor_latente_1}
-            \end{equation}
+            El calculo al igual que en el caso anterior, se realiza mediante la ecuación \ref{eq:relacion_calor}, pero teniendo en cuenta que el calor ganado y cedido son diferentes.
 
-            Donde $Q_{ganado}$ es el flujo de calor dado por el hielo y el agua resultante del hielo fundido, mientras que $Q_{cedido}$ es el flujo de calor dado por el calorímetro y el agua inicialmente contenida en él. Si se toma en cuenta la ecuación \ref{eq:flujo_calor}, el calor ganado y cedido pueden expresarse como:
+            Para este caso, el $Q_{ganado}$ es el flujo de calor dado por el hielo y el agua resultante del hielo fundido, mientras que $Q_{cedido}$ es el flujo de calor dado por el calorímetro y el agua inicialmente contenida en él. Si se toma en cuenta la ecuación \ref{eq:flujo_calor}, el calor ganado y cedido pueden expresarse como:
 
             \begin{equation}
                 \begin{split}
@@ -120,9 +137,54 @@
 
     \section{\small ANÁLISIS Y RESULTADOS}
         \subsection*{\small Calor latente de fusión del hielo}
-        Con los resultados obtenidos en el laboratorio, se procede a calcular el calor latente de fusión del hielo. Para ello, se toman los siguientes valores:
+        Con los resultados obtenidos en el laboratorio, se procede a calcular el calor latente de fusión del hielo. Para esto, se tienen además los siguientes datos:
 
+        \begin{itemize}
+            \item $M' = 92.8 , g$
+            \item $c_{agua} = 1.00 , cal/g \cdot C^{-1}$
+            \item $c_{cal} = 0.22 , cal/g \cdot C^{-1}$
+            \item $c_{hielo} = 0.50 , cal/g \cdot C^{-1}$
+        \end{itemize}
+
+        Los resultados se obtuvieron al realizar el proceso descrito en la metodología para tres masas de hielo diferentes, donde para cada masa se tomó una medida a alta temperatura (en un rango entre $37 , ^oC$ y $39 , ^oC$) y una a temperatura ambiente ($34 , ^oC$), obteniendo un total de 6 medidas. Los resultados obtenidos se muestran en la Tabla \ref{tab:calor_latente}.
+
+        \begin{table}[H]
+            \centering
+            \caption{Resultados obtenidos para el calor latente de fusión del hielo.}
+            \begin{tabular}{ccccccc}
+                \hline\hline
+                \textbf{$M$} & \textbf{$m$} & \textbf{$T_2$} & \textbf{$T_0$} & \textbf{$T$} & \textbf{$L_f$} & \textbf{$\% Error$} \\
+                \small $[g]$ & \small $[g]$ & \small $[^oC]$ & \small $[^oC]$ & \small $[^oC]$ & \small $[cal / g]$ &  \\
+                \hline\hline
+                $147.75$ & $14.31$ & $37$ & $7$ & $28$ & $81.26$ & $1.58$ \\
+                $163.13$ & $14.62$ & $24$ & $7$ & $17$ & $74.38$ & $7.02$ \\
+                \hline
+                $182.91$ & $6.11$ & $39$ & $7$ & $36$ & $67.33$ & $15.83$ \\
+                $177.08$ & $6.85$ & $24$ & $7$ & $21$ & $68.99$ & $13.76$ \\
+                \hline
+                $161.00$ & $5.04$ & $38$ & $7$ & $35$ & $76.49$ & $4.39$ \\
+                $224.65$ & $4.80$ & $24$ & $6$ & $22$ & $83.11$ & $3.89$ \\
+                \hline
+            \end{tabular}
+            \caption*{\textit{Nota:} El porcentaje de error se calculo respecto al valor teórico del calor latente de fusión del hielo, el cual es $80 \, cal / g$ dado en la guia de laboratorio.}
+            \label{tab:calor_latente}
+        \end{table}
+
+        De estos resultados se puede observar que no existe una relación entre la certeza del resultado y la temperatura inicial utilizada para el agua. Si se revisan los resultados por las masas utilizadas, se obtiene lo siguiente:
+
+        \begin{itemize}
+        \item $m \approx 14.6 , g$: Desviación estándar de $4.87$, el valor promedio es de $L_f = 77.82 , cal / g$ y un porcentaje de error del $2.72 \%$.
+        \item $m \approx 6.8 , g$: Desviación estándar de $1.17$, el valor promedio es de $L_f = 68.16 , cal / g$ y un porcentaje de error del $14.79 \%$.
+        \item $m \approx 5.0 , g$: Desviación estándar de $4.68$, el valor promedio es de $L_f = 79.80 , cal / g$ y un porcentaje de error del $0.25 \%$.
+        \end{itemize}
+
+        Se puede observar que los resultados concuerdan con el valor teórico, siendo bastante más preciso el obtenido para $m \approx 5.0 , g$. Sin embargo, al igual que en el caso de la temperatura, no se observa una relación entre la masa y la certeza del resultado.
+
+        En cuanto al valor promedio del calor latente de fusión del hielo, se obtiene que es de $L_f = 75.26 , cal / g$ con una desviación estándar de $6.35$ y un porcentaje de error del $5.92 \%$. Se trata de un resultado aceptable, cuyo error se debe a errores de medición en las masas y las temperaturas. Se podría decir que principalmente en la medida de la masa del hielo, ya que mientras se pesa y se toma la temperatura, ya ha iniciado el proceso de fusión del hielo, lo que reduce la masa final del hielo que será utilizada.
+
+    
     \section{\small CONCLUSIONES}
+    En general, se puede concluir que los resultados obtenidos tienen una precisión aceptable, ya que el porcentaje de error es en su mayoría inferior al $10 \%$. Sin embargo, se observa que para algunas medidas el porcentaje de error es significativamente mayor, lo que puede deberse a errores en la medición o a factores externos que afectaron el proceso. 
 
 
 

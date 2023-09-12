@@ -1,5 +1,5 @@
-Corriente I (mA);Voltaje V (mv) +-0,01;;;0,31;T ambiente;297,74K
-0,5;0;;;;;
+Corriente I (mA);Voltaje V (v) +-0,01;;;0,31;T ambiente;297,74K
+0,5;0,00031;;;;;
 0,6;0,00115;;;;;
 0,7;0,00229;;;;;
 0,8;0,00345;;;;;
